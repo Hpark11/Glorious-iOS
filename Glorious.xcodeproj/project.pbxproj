@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8164E3E61FB95EA20054384D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E3E51FB95EA20054384D /* AppDelegate.swift */; };
+		8164E3E81FB95EA20054384D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E3E71FB95EA20054384D /* ViewController.swift */; };
+		8164E3EB1FB95EA20054384D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8164E3E91FB95EA20054384D /* Main.storyboard */; };
+		8164E3EE1FB95EA20054384D /* Glorious.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8164E3EC1FB95EA20054384D /* Glorious.xcdatamodeld */; };
+		8164E3F01FB95EA20054384D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8164E3EF1FB95EA20054384D /* Assets.xcassets */; };
+		8164E3F31FB95EA20054384D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8164E3F11FB95EA20054384D /* LaunchScreen.storyboard */; };
+		8164E3FE1FB95EA20054384D /* GloriousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E3FD1FB95EA20054384D /* GloriousTests.swift */; };
+		8164E4091FB95EA20054384D /* GloriousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E4081FB95EA20054384D /* GloriousUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8164E3FA1FB95EA20054384D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8164E3DA1FB95EA20054384D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8164E3E11FB95EA20054384D;
+			remoteInfo = Glorious;
+		};
+		8164E4051FB95EA20054384D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8164E3DA1FB95EA20054384D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8164E3E11FB95EA20054384D;
+			remoteInfo = Glorious;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8164E3E21FB95EA20054384D /* Glorious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glorious.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8164E3E51FB95EA20054384D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8164E3E71FB95EA20054384D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8164E3EA1FB95EA20054384D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8164E3ED1FB95EA20054384D /* Glorious.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Glorious.xcdatamodel; sourceTree = "<group>"; };
+		8164E3EF1FB95EA20054384D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8164E3F21FB95EA20054384D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8164E3F41FB95EA20054384D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8164E3F91FB95EA20054384D /* GloriousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GloriousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8164E3FD1FB95EA20054384D /* GloriousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloriousTests.swift; sourceTree = "<group>"; };
+		8164E3FF1FB95EA20054384D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8164E4041FB95EA20054384D /* GloriousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GloriousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8164E4081FB95EA20054384D /* GloriousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloriousUITests.swift; sourceTree = "<group>"; };
+		8164E40A1FB95EA20054384D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8164E3DF1FB95EA20054384D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8164E3F61FB95EA20054384D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8164E4011FB95EA20054384D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8164E3D91FB95EA20054384D = {
+			isa = PBXGroup;
+			children = (
+				8164E3E41FB95EA20054384D /* Glorious */,
+				8164E3FC1FB95EA20054384D /* GloriousTests */,
+				8164E4071FB95EA20054384D /* GloriousUITests */,
+				8164E3E31FB95EA20054384D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8164E3E31FB95EA20054384D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8164E3E21FB95EA20054384D /* Glorious.app */,
+				8164E3F91FB95EA20054384D /* GloriousTests.xctest */,
+				8164E4041FB95EA20054384D /* GloriousUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8164E3E41FB95EA20054384D /* Glorious */ = {
+			isa = PBXGroup;
+			children = (
+				8164E3E51FB95EA20054384D /* AppDelegate.swift */,
+				8164E3E71FB95EA20054384D /* ViewController.swift */,
+				8164E3E91FB95EA20054384D /* Main.storyboard */,
+				8164E3EF1FB95EA20054384D /* Assets.xcassets */,
+				8164E3F11FB95EA20054384D /* LaunchScreen.storyboard */,
+				8164E3F41FB95EA20054384D /* Info.plist */,
+				8164E3EC1FB95EA20054384D /* Glorious.xcdatamodeld */,
+			);
+			path = Glorious;
+			sourceTree = "<group>";
+		};
+		8164E3FC1FB95EA20054384D /* GloriousTests */ = {
+			isa = PBXGroup;
+			children = (
+				8164E3FD1FB95EA20054384D /* GloriousTests.swift */,
+				8164E3FF1FB95EA20054384D /* Info.plist */,
+			);
+			path = GloriousTests;
+			sourceTree = "<group>";
+		};
+		8164E4071FB95EA20054384D /* GloriousUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8164E4081FB95EA20054384D /* GloriousUITests.swift */,
+				8164E40A1FB95EA20054384D /* Info.plist */,
+			);
+			path = GloriousUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8164E3E11FB95EA20054384D /* Glorious */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8164E40D1FB95EA20054384D /* Build configuration list for PBXNativeTarget "Glorious" */;
+			buildPhases = (
+				8164E3DE1FB95EA20054384D /* Sources */,
+				8164E3DF1FB95EA20054384D /* Frameworks */,
+				8164E3E01FB95EA20054384D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Glorious;
+			productName = Glorious;
+			productReference = 8164E3E21FB95EA20054384D /* Glorious.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8164E3F81FB95EA20054384D /* GloriousTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8164E4101FB95EA20054384D /* Build configuration list for PBXNativeTarget "GloriousTests" */;
+			buildPhases = (
+				8164E3F51FB95EA20054384D /* Sources */,
+				8164E3F61FB95EA20054384D /* Frameworks */,
+				8164E3F71FB95EA20054384D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8164E3FB1FB95EA20054384D /* PBXTargetDependency */,
+			);
+			name = GloriousTests;
+			productName = GloriousTests;
+			productReference = 8164E3F91FB95EA20054384D /* GloriousTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8164E4031FB95EA20054384D /* GloriousUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8164E4131FB95EA20054384D /* Build configuration list for PBXNativeTarget "GloriousUITests" */;
+			buildPhases = (
+				8164E4001FB95EA20054384D /* Sources */,
+				8164E4011FB95EA20054384D /* Frameworks */,
+				8164E4021FB95EA20054384D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8164E4061FB95EA20054384D /* PBXTargetDependency */,
+			);
+			name = GloriousUITests;
+			productName = GloriousUITests;
+			productReference = 8164E4041FB95EA20054384D /* GloriousUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8164E3DA1FB95EA20054384D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = church;
+				TargetAttributes = {
+					8164E3E11FB95EA20054384D = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					8164E3F81FB95EA20054384D = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8164E3E11FB95EA20054384D;
+					};
+					8164E4031FB95EA20054384D = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8164E3E11FB95EA20054384D;
+					};
+				};
+			};
+			buildConfigurationList = 8164E3DD1FB95EA20054384D /* Build configuration list for PBXProject "Glorious" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8164E3D91FB95EA20054384D;
+			productRefGroup = 8164E3E31FB95EA20054384D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8164E3E11FB95EA20054384D /* Glorious */,
+				8164E3F81FB95EA20054384D /* GloriousTests */,
+				8164E4031FB95EA20054384D /* GloriousUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8164E3E01FB95EA20054384D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8164E3F31FB95EA20054384D /* LaunchScreen.storyboard in Resources */,
+				8164E3F01FB95EA20054384D /* Assets.xcassets in Resources */,
+				8164E3EB1FB95EA20054384D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8164E3F71FB95EA20054384D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8164E4021FB95EA20054384D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8164E3DE1FB95EA20054384D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8164E3EE1FB95EA20054384D /* Glorious.xcdatamodeld in Sources */,
+				8164E3E81FB95EA20054384D /* ViewController.swift in Sources */,
+				8164E3E61FB95EA20054384D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8164E3F51FB95EA20054384D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8164E3FE1FB95EA20054384D /* GloriousTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8164E4001FB95EA20054384D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8164E4091FB95EA20054384D /* GloriousUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8164E3FB1FB95EA20054384D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8164E3E11FB95EA20054384D /* Glorious */;
+			targetProxy = 8164E3FA1FB95EA20054384D /* PBXContainerItemProxy */;
+		};
+		8164E4061FB95EA20054384D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8164E3E11FB95EA20054384D /* Glorious */;
+			targetProxy = 8164E4051FB95EA20054384D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8164E3E91FB95EA20054384D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8164E3EA1FB95EA20054384D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8164E3F11FB95EA20054384D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8164E3F21FB95EA20054384D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8164E40B1FB95EA20054384D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8164E40C1FB95EA20054384D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8164E40E1FB95EA20054384D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R2ESGSL5P9;
+				INFOPLIST_FILE = Glorious/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = presbyterian.church.Glorious;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8164E40F1FB95EA20054384D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R2ESGSL5P9;
+				INFOPLIST_FILE = Glorious/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = presbyterian.church.Glorious;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8164E4111FB95EA20054384D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R2ESGSL5P9;
+				INFOPLIST_FILE = GloriousTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = presbyterian.church.GloriousTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Glorious.app/Glorious";
+			};
+			name = Debug;
+		};
+		8164E4121FB95EA20054384D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R2ESGSL5P9;
+				INFOPLIST_FILE = GloriousTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = presbyterian.church.GloriousTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Glorious.app/Glorious";
+			};
+			name = Release;
+		};
+		8164E4141FB95EA20054384D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R2ESGSL5P9;
+				INFOPLIST_FILE = GloriousUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = presbyterian.church.GloriousUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Glorious;
+			};
+			name = Debug;
+		};
+		8164E4151FB95EA20054384D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R2ESGSL5P9;
+				INFOPLIST_FILE = GloriousUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = presbyterian.church.GloriousUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Glorious;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8164E3DD1FB95EA20054384D /* Build configuration list for PBXProject "Glorious" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8164E40B1FB95EA20054384D /* Debug */,
+				8164E40C1FB95EA20054384D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8164E40D1FB95EA20054384D /* Build configuration list for PBXNativeTarget "Glorious" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8164E40E1FB95EA20054384D /* Debug */,
+				8164E40F1FB95EA20054384D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8164E4101FB95EA20054384D /* Build configuration list for PBXNativeTarget "GloriousTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8164E4111FB95EA20054384D /* Debug */,
+				8164E4121FB95EA20054384D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8164E4131FB95EA20054384D /* Build configuration list for PBXNativeTarget "GloriousUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8164E4141FB95EA20054384D /* Debug */,
+				8164E4151FB95EA20054384D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8164E3EC1FB95EA20054384D /* Glorious.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8164E3ED1FB95EA20054384D /* Glorious.xcdatamodel */,
+			);
+			currentVersion = 8164E3ED1FB95EA20054384D /* Glorious.xcdatamodel */;
+			path = Glorious.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8164E3DA1FB95EA20054384D /* Project object */;
+}
