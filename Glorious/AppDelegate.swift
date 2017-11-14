@@ -14,9 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    guard let window = window else { fatalError("There is no Actual UI Window") }
+    let navigator = Navigator(window: window)
+    let sermonListViewModel = SermonListViewModel(navigator: navigator)
+    _ = navigator.navigate(to: Stage.sermonList(sermonListViewModel), type: .root)
     return true
   }
 

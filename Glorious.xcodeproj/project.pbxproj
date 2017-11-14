@@ -7,14 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15F6344187F4F278FE1B35F5 /* Pods_GloriousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D462DE5A4495D2373C124CA2 /* Pods_GloriousTests.framework */; };
+		61894EB15C145EE8B646EB25 /* Pods_Glorious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD62D5F4DD69F3F360A4A62 /* Pods_Glorious.framework */; };
+		8141141E1FBAAB1C00669EE0 /* YoutubePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8141141D1FBAAB1C00669EE0 /* YoutubePlayerViewController.swift */; };
+		814114211FBAAE2000669EE0 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814114201FBAAE2000669EE0 /* UITableView+Ext.swift */; };
 		8164E3E61FB95EA20054384D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E3E51FB95EA20054384D /* AppDelegate.swift */; };
-		8164E3E81FB95EA20054384D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E3E71FB95EA20054384D /* ViewController.swift */; };
 		8164E3EB1FB95EA20054384D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8164E3E91FB95EA20054384D /* Main.storyboard */; };
 		8164E3EE1FB95EA20054384D /* Glorious.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8164E3EC1FB95EA20054384D /* Glorious.xcdatamodeld */; };
 		8164E3F01FB95EA20054384D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8164E3EF1FB95EA20054384D /* Assets.xcassets */; };
 		8164E3F31FB95EA20054384D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8164E3F11FB95EA20054384D /* LaunchScreen.storyboard */; };
 		8164E3FE1FB95EA20054384D /* GloriousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E3FD1FB95EA20054384D /* GloriousTests.swift */; };
 		8164E4091FB95EA20054384D /* GloriousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E4081FB95EA20054384D /* GloriousUITests.swift */; };
+		8164E41C1FB9671A0054384D /* SermonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E41B1FB9671A0054384D /* SermonListViewController.swift */; };
+		8164E41E1FB967A00054384D /* SermonListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E41D1FB967A00054384D /* SermonListViewModel.swift */; };
+		8164E4201FB968290054384D /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E41F1FB968290054384D /* Stage.swift */; };
+		8164E4251FB96D820054384D /* ViewModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E4241FB96D820054384D /* ViewModelBase.swift */; };
+		8164E4271FB96DB10054384D /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E4261FB96DB10054384D /* Navigator.swift */; };
+		8164E4291FB96DC50054384D /* NavigatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E4281FB96DC50054384D /* NavigatorType.swift */; };
+		8164E42B1FB96F2E0054384D /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E42A1FB96F2E0054384D /* ViewModelBindable.swift */; };
+		8164E42D1FB970A30054384D /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E42C1FB970A30054384D /* Identifiable.swift */; };
+		8164E42F1FB970B10054384D /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E42E1FB970B10054384D /* NibLoadable.swift */; };
+		8164E4311FB9721A0054384D /* Sermon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E4301FB9721A0054384D /* Sermon.swift */; };
+		8164E4341FB974C40054384D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E4331FB974C40054384D /* APIService.swift */; };
+		8164E4391FB995BC0054384D /* SermonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E4371FB995BC0054384D /* SermonTableViewCell.swift */; };
+		8164E43A1FB995BC0054384D /* SermonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8164E4381FB995BC0054384D /* SermonTableViewCell.xib */; };
+		A92B6AECF046CCD46420DCE7 /* Pods_GloriousUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0094D2BF2E01C6F4833B8B8B /* Pods_GloriousUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +52,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0094D2BF2E01C6F4833B8B8B /* Pods_GloriousUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GloriousUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		052FE3A5BE4787E8CB56A9A7 /* Pods-Glorious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glorious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Glorious/Pods-Glorious.debug.xcconfig"; sourceTree = "<group>"; };
+		0FA3976E8180A1B4C91EFC51 /* Pods-GloriousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GloriousUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GloriousUITests/Pods-GloriousUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E006BE7E0C344B28768C2C8 /* Pods-Glorious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glorious.release.xcconfig"; path = "Pods/Target Support Files/Pods-Glorious/Pods-Glorious.release.xcconfig"; sourceTree = "<group>"; };
+		8141141D1FBAAB1C00669EE0 /* YoutubePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubePlayerViewController.swift; sourceTree = "<group>"; };
+		814114201FBAAE2000669EE0 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		8164E3E21FB95EA20054384D /* Glorious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glorious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8164E3E51FB95EA20054384D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8164E3E71FB95EA20054384D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8164E3EA1FB95EA20054384D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8164E3ED1FB95EA20054384D /* Glorious.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Glorious.xcdatamodel; sourceTree = "<group>"; };
 		8164E3EF1FB95EA20054384D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +71,24 @@
 		8164E4041FB95EA20054384D /* GloriousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GloriousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8164E4081FB95EA20054384D /* GloriousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GloriousUITests.swift; sourceTree = "<group>"; };
 		8164E40A1FB95EA20054384D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8164E41B1FB9671A0054384D /* SermonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonListViewController.swift; sourceTree = "<group>"; };
+		8164E41D1FB967A00054384D /* SermonListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonListViewModel.swift; sourceTree = "<group>"; };
+		8164E41F1FB968290054384D /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		8164E4241FB96D820054384D /* ViewModelBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBase.swift; sourceTree = "<group>"; };
+		8164E4261FB96DB10054384D /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		8164E4281FB96DC50054384D /* NavigatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorType.swift; sourceTree = "<group>"; };
+		8164E42A1FB96F2E0054384D /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
+		8164E42C1FB970A30054384D /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		8164E42E1FB970B10054384D /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		8164E4301FB9721A0054384D /* Sermon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sermon.swift; sourceTree = "<group>"; };
+		8164E4331FB974C40054384D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		8164E4371FB995BC0054384D /* SermonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonTableViewCell.swift; sourceTree = "<group>"; };
+		8164E4381FB995BC0054384D /* SermonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SermonTableViewCell.xib; sourceTree = "<group>"; };
+		98A47D47E51FFC77BC749A28 /* Pods-GloriousTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GloriousTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GloriousTests/Pods-GloriousTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9BD62D5F4DD69F3F360A4A62 /* Pods_Glorious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glorious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA85DBFAB70D0A3AD9953F96 /* Pods-GloriousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GloriousTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GloriousTests/Pods-GloriousTests.release.xcconfig"; sourceTree = "<group>"; };
+		D462DE5A4495D2373C124CA2 /* Pods_GloriousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GloriousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED74AB95135864BEDC09C141 /* Pods-GloriousUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GloriousUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GloriousUITests/Pods-GloriousUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61894EB15C145EE8B646EB25 /* Pods_Glorious.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15F6344187F4F278FE1B35F5 /* Pods_GloriousTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +112,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92B6AECF046CCD46420DCE7 /* Pods_GloriousUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00BDD2F7A44693FB2BD40DCC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				052FE3A5BE4787E8CB56A9A7 /* Pods-Glorious.debug.xcconfig */,
+				7E006BE7E0C344B28768C2C8 /* Pods-Glorious.release.xcconfig */,
+				98A47D47E51FFC77BC749A28 /* Pods-GloriousTests.debug.xcconfig */,
+				BA85DBFAB70D0A3AD9953F96 /* Pods-GloriousTests.release.xcconfig */,
+				0FA3976E8180A1B4C91EFC51 /* Pods-GloriousUITests.debug.xcconfig */,
+				ED74AB95135864BEDC09C141 /* Pods-GloriousUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8141141F1FBAAE0C00669EE0 /* UI+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				814114201FBAAE2000669EE0 /* UITableView+Ext.swift */,
+			);
+			path = "UI+Extension";
+			sourceTree = "<group>";
+		};
 		8164E3D91FB95EA20054384D = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +147,8 @@
 				8164E3FC1FB95EA20054384D /* GloriousTests */,
 				8164E4071FB95EA20054384D /* GloriousUITests */,
 				8164E3E31FB95EA20054384D /* Products */,
+				00BDD2F7A44693FB2BD40DCC /* Pods */,
+				F1B49977D0FEA25A5298003E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +166,14 @@
 			isa = PBXGroup;
 			children = (
 				8164E3E51FB95EA20054384D /* AppDelegate.swift */,
-				8164E3E71FB95EA20054384D /* ViewController.swift */,
+				8164E4191FB964E40054384D /* Resource */,
+				8164E4181FB962D30054384D /* Util */,
+				8164E4351FB9955F0054384D /* View */,
+				8164E4171FB960B20054384D /* Controller */,
+				8164E4161FB95F070054384D /* Model */,
 				8164E3E91FB95EA20054384D /* Main.storyboard */,
-				8164E3EF1FB95EA20054384D /* Assets.xcassets */,
 				8164E3F11FB95EA20054384D /* LaunchScreen.storyboard */,
 				8164E3F41FB95EA20054384D /* Info.plist */,
-				8164E3EC1FB95EA20054384D /* Glorious.xcdatamodeld */,
 			);
 			path = Glorious;
 			sourceTree = "<group>";
@@ -128,6 +196,108 @@
 			path = GloriousUITests;
 			sourceTree = "<group>";
 		};
+		8164E4161FB95F070054384D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8164E4301FB9721A0054384D /* Sermon.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8164E4171FB960B20054384D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8164E41B1FB9671A0054384D /* SermonListViewController.swift */,
+				8164E41D1FB967A00054384D /* SermonListViewModel.swift */,
+				8141141D1FBAAB1C00669EE0 /* YoutubePlayerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8164E4181FB962D30054384D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				8164E4321FB9735B0054384D /* API */,
+				8164E4221FB96C760054384D /* Addon */,
+				8164E4211FB96C650054384D /* Foundation */,
+				8164E41A1FB965360054384D /* Navigator */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		8164E4191FB964E40054384D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				8164E3EF1FB95EA20054384D /* Assets.xcassets */,
+				8164E3EC1FB95EA20054384D /* Glorious.xcdatamodeld */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		8164E41A1FB965360054384D /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				8164E41F1FB968290054384D /* Stage.swift */,
+				8164E4261FB96DB10054384D /* Navigator.swift */,
+				8164E4281FB96DC50054384D /* NavigatorType.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		8164E4211FB96C650054384D /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				8164E4241FB96D820054384D /* ViewModelBase.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		8164E4221FB96C760054384D /* Addon */ = {
+			isa = PBXGroup;
+			children = (
+				8164E42A1FB96F2E0054384D /* ViewModelBindable.swift */,
+				8164E42C1FB970A30054384D /* Identifiable.swift */,
+				8164E42E1FB970B10054384D /* NibLoadable.swift */,
+			);
+			path = Addon;
+			sourceTree = "<group>";
+		};
+		8164E4321FB9735B0054384D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8164E4331FB974C40054384D /* APIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8164E4351FB9955F0054384D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8141141F1FBAAE0C00669EE0 /* UI+Extension */,
+				8164E4361FB995850054384D /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8164E4361FB995850054384D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8164E4371FB995BC0054384D /* SermonTableViewCell.swift */,
+				8164E4381FB995BC0054384D /* SermonTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F1B49977D0FEA25A5298003E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BD62D5F4DD69F3F360A4A62 /* Pods_Glorious.framework */,
+				D462DE5A4495D2373C124CA2 /* Pods_GloriousTests.framework */,
+				0094D2BF2E01C6F4833B8B8B /* Pods_GloriousUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +305,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8164E40D1FB95EA20054384D /* Build configuration list for PBXNativeTarget "Glorious" */;
 			buildPhases = (
+				B2B2D8D684441DFB1BCAD484 /* [CP] Check Pods Manifest.lock */,
 				8164E3DE1FB95EA20054384D /* Sources */,
 				8164E3DF1FB95EA20054384D /* Frameworks */,
 				8164E3E01FB95EA20054384D /* Resources */,
+				603B18742C709BD6C3110994 /* [CP] Embed Pods Frameworks */,
+				969843AE5BEE867A664B6CF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +325,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8164E4101FB95EA20054384D /* Build configuration list for PBXNativeTarget "GloriousTests" */;
 			buildPhases = (
+				1A0DAC7C1567BE0A590618CA /* [CP] Check Pods Manifest.lock */,
 				8164E3F51FB95EA20054384D /* Sources */,
 				8164E3F61FB95EA20054384D /* Frameworks */,
 				8164E3F71FB95EA20054384D /* Resources */,
+				237C670DBFE7CE2B0D40402C /* [CP] Embed Pods Frameworks */,
+				D14FB9F6881D2C45665F5BA6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +346,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8164E4131FB95EA20054384D /* Build configuration list for PBXNativeTarget "GloriousUITests" */;
 			buildPhases = (
+				DC1A8FC91A428397D8657B42 /* [CP] Check Pods Manifest.lock */,
 				8164E4001FB95EA20054384D /* Sources */,
 				8164E4011FB95EA20054384D /* Frameworks */,
 				8164E4021FB95EA20054384D /* Resources */,
+				76DBF59C8DA68B835A2326CF /* [CP] Embed Pods Frameworks */,
+				91DBC790D42660C6A1C33ABE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +417,7 @@
 				8164E3F31FB95EA20054384D /* LaunchScreen.storyboard in Resources */,
 				8164E3F01FB95EA20054384D /* Assets.xcassets in Resources */,
 				8164E3EB1FB95EA20054384D /* Main.storyboard in Resources */,
+				8164E43A1FB995BC0054384D /* SermonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,14 +437,165 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A0DAC7C1567BE0A590618CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		237C670DBFE7CE2B0D40402C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GloriousTests/Pods-GloriousTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		603B18742C709BD6C3110994 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Glorious/Pods-Glorious-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76DBF59C8DA68B835A2326CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GloriousUITests/Pods-GloriousUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91DBC790D42660C6A1C33ABE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GloriousUITests/Pods-GloriousUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		969843AE5BEE867A664B6CF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Glorious/Pods-Glorious-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2B2D8D684441DFB1BCAD484 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D14FB9F6881D2C45665F5BA6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GloriousTests/Pods-GloriousTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC1A8FC91A428397D8657B42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8164E3DE1FB95EA20054384D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8164E4271FB96DB10054384D /* Navigator.swift in Sources */,
+				8164E41E1FB967A00054384D /* SermonListViewModel.swift in Sources */,
+				8164E41C1FB9671A0054384D /* SermonListViewController.swift in Sources */,
+				8164E4391FB995BC0054384D /* SermonTableViewCell.swift in Sources */,
+				8164E42D1FB970A30054384D /* Identifiable.swift in Sources */,
+				8141141E1FBAAB1C00669EE0 /* YoutubePlayerViewController.swift in Sources */,
+				8164E42B1FB96F2E0054384D /* ViewModelBindable.swift in Sources */,
+				8164E42F1FB970B10054384D /* NibLoadable.swift in Sources */,
+				8164E4291FB96DC50054384D /* NavigatorType.swift in Sources */,
 				8164E3EE1FB95EA20054384D /* Glorious.xcdatamodeld in Sources */,
-				8164E3E81FB95EA20054384D /* ViewController.swift in Sources */,
 				8164E3E61FB95EA20054384D /* AppDelegate.swift in Sources */,
+				8164E4341FB974C40054384D /* APIService.swift in Sources */,
+				8164E4201FB968290054384D /* Stage.swift in Sources */,
+				814114211FBAAE2000669EE0 /* UITableView+Ext.swift in Sources */,
+				8164E4251FB96D820054384D /* ViewModelBase.swift in Sources */,
+				8164E4311FB9721A0054384D /* Sermon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,11 +759,13 @@
 		};
 		8164E40E1FB95EA20054384D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 052FE3A5BE4787E8CB56A9A7 /* Pods-Glorious.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2ESGSL5P9;
 				INFOPLIST_FILE = Glorious/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = presbyterian.church.Glorious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,11 +776,13 @@
 		};
 		8164E40F1FB95EA20054384D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E006BE7E0C344B28768C2C8 /* Pods-Glorious.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R2ESGSL5P9;
 				INFOPLIST_FILE = Glorious/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = presbyterian.church.Glorious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,6 +793,7 @@
 		};
 		8164E4111FB95EA20054384D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98A47D47E51FFC77BC749A28 /* Pods-GloriousTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +811,7 @@
 		};
 		8164E4121FB95EA20054384D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA85DBFAB70D0A3AD9953F96 /* Pods-GloriousTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +829,7 @@
 		};
 		8164E4141FB95EA20054384D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FA3976E8180A1B4C91EFC51 /* Pods-GloriousUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +846,7 @@
 		};
 		8164E4151FB95EA20054384D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED74AB95135864BEDC09C141 /* Pods-GloriousUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
