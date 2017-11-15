@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SermonListCollectionViewCell" id="gTV-IL-0wX" customClass="SermonListCollectionViewCell" customModule="Glorious" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="298" height="332"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="298" height="332"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mod-qG-pwm">
+                        <rect key="frame" x="5.5" y="8" width="287" height="316"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1cG-TV-cGG">
+                                <rect key="frame" x="0.0" y="0.0" width="287" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="6Wt-gA-wna"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="XaM-do-4eR">
+                                <rect key="frame" x="203.5" y="294" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="eFy-Bk-fOR"/>
+                                    <constraint firstAttribute="width" constant="16" id="nGT-ju-Qlf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강태흥 목사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygx-pa-ZbU">
+                                <rect key="frame" x="223.5" y="292" width="55.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="T54-AV-PZV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4x-Kj-4cx">
+                                <rect key="frame" x="6" y="148" width="277" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="q4x-Kj-4cx" secondAttribute="trailing" constant="4" id="1i1-Xk-cja"/>
+                            <constraint firstItem="1cG-TV-cGG" firstAttribute="top" secondItem="Mod-qG-pwm" secondAttribute="top" id="9Fj-m6-nkp"/>
+                            <constraint firstItem="q4x-Kj-4cx" firstAttribute="leading" secondItem="Mod-qG-pwm" secondAttribute="leading" constant="6" id="9H1-Yy-VWB"/>
+                            <constraint firstAttribute="bottom" secondItem="XaM-do-4eR" secondAttribute="bottom" constant="6" id="Dnf-fu-goz"/>
+                            <constraint firstAttribute="trailing" secondItem="1cG-TV-cGG" secondAttribute="trailing" id="TDU-F0-wfJ"/>
+                            <constraint firstItem="1cG-TV-cGG" firstAttribute="leading" secondItem="Mod-qG-pwm" secondAttribute="leading" id="Wha-eP-4dv"/>
+                            <constraint firstAttribute="trailing" secondItem="ygx-pa-ZbU" secondAttribute="trailing" constant="8" id="crK-qY-55d"/>
+                            <constraint firstItem="ygx-pa-ZbU" firstAttribute="leading" secondItem="XaM-do-4eR" secondAttribute="trailing" constant="4" id="d2y-n1-x39"/>
+                            <constraint firstItem="q4x-Kj-4cx" firstAttribute="top" secondItem="1cG-TV-cGG" secondAttribute="bottom" constant="8" id="skp-uZ-oQS"/>
+                            <constraint firstItem="ygx-pa-ZbU" firstAttribute="centerY" secondItem="XaM-do-4eR" secondAttribute="centerY" id="snI-dz-BVm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Mod-qG-pwm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="2Zx-8D-BmC"/>
+                <constraint firstAttribute="bottom" secondItem="Mod-qG-pwm" secondAttribute="bottom" constant="8" id="DID-Nk-fjq"/>
+                <constraint firstAttribute="trailing" secondItem="Mod-qG-pwm" secondAttribute="trailing" constant="5.5999999999999996" id="VSH-AG-4QB"/>
+                <constraint firstItem="Mod-qG-pwm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5.5999999999999996" id="xYi-h5-yVb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="298" height="332"/>
+            <connections>
+                <outlet property="imageView" destination="1cG-TV-cGG" id="c09-8d-cZY"/>
+                <outlet property="mainLabel" destination="q4x-Kj-4cx" id="9Vs-gU-GtJ"/>
+                <outlet property="mainView" destination="Mod-qG-pwm" id="svZ-np-MXX"/>
+                <outlet property="nameLabel" destination="ygx-pa-ZbU" id="NJL-20-JMP"/>
+            </connections>
+            <point key="canvasLocation" x="37" y="84"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="face" width="24" height="24"/>
+    </resources>
+</document>

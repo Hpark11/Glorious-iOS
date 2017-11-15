@@ -10,8 +10,12 @@ import UIKit
 import RxSwift
 
 protocol NavigatorType {
-  init(window: UIWindow)
+  init(root: UIViewController)
+  
+  @discardableResult
   func navigate(to stage: Stage, type: Stage.NavigationType) -> Observable<Void>
+  
+  @discardableResult
   func revert(animated: Bool) -> Observable<Void>
 }
 

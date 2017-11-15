@@ -11,13 +11,12 @@ import RxSwift
 import RxCocoa
 
 class Navigator: NavigatorType {
-  private var window: UIWindow
+  private let root: UIViewController
   private var currentViewController: UIViewController
   
-  required init(window: UIWindow) {
-    self.window = window
-    guard let root = window.rootViewController else { fatalError("There is no Root ViewController") }
-    currentViewController = root
+  required init(root: UIViewController) {
+    self.root = root
+    self.currentViewController = root
   }
   
   private func viewController(for viewController: UIViewController) -> UIViewController {
@@ -35,14 +34,14 @@ class Navigator: NavigatorType {
     }
   }
   
-  func navigate(to stage: Stage, type: Stage.NavigationType) -> Observable<Void> {
+  @discardableResult
+  public func navigate(to stage: Stage, type: Stage.NavigationType) -> Observable<Void> {
     let subject = PublishSubject<Void>()
-    let vc = stage.viewController()
+    let vc = stage.viewController(root: root)
     
     switch type {
     case .root:
       self.currentViewController = viewController(for: vc)
-      window.rootViewController = vc
       subject.onCompleted()
     case .show(.normal):
       self.navigationController.show(vc, sender: nil)
@@ -57,7 +56,8 @@ class Navigator: NavigatorType {
     return subject.asObservable().take(1)
   }
   
-  func revert(animated: Bool) -> Observable<Void> {
+  @discardableResult
+  public func revert(animated: Bool) -> Observable<Void> {
     let subject = PublishSubject<Void>()
     if let pc = currentViewController.presentingViewController {
       self.currentViewController.dismiss(animated: animated, completion: {
@@ -66,9 +66,7 @@ class Navigator: NavigatorType {
       })
     } else if let nc = currentViewController.navigationController {
       guard nc.popViewController(animated: animated) != nil else { fatalError("Nothing left to go back") }
-    } else {
-      fatalError("Nothing on current ViewController")
-    }
+    } else { fatalError("Nothing on current ViewController") }
     return subject.asObservable().take(1)
   }
   

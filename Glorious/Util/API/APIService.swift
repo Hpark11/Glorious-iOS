@@ -15,7 +15,10 @@ class APIService {
   static let key = "AIzaSyAWr6kn5Id_50dHSUeqvMl6iF0WKvxZJeA"
   
   static let playListEndpoint = "/playlistItems"
-  static let playListId = "UU4Y-jkVQdsAAqSzD51chjJQ"
+  
+  static let sermonListId = "UU4Y-jkVQdsAAqSzD51chjJQ"
+  static let centerMessageListId = "UUwYStAqJNzgIEf33u7a0xiQ"
+  //static let playListId = ""
   
   enum ServiceError: Error {
     case invalidURL(String)
@@ -23,8 +26,8 @@ class APIService {
     case invalidJSON(Any)
   }
   
-  static var sermons: () -> Observable<[Sermon]> = {
-    return req(endpoint: playListEndpoint, query: ["part": "snippet", "playlistId": playListId, "key": key, "maxResults": 12]).map { data in
+  static var sermons: (String) -> Observable<[Sermon]> = { listId in
+    return req(endpoint: playListEndpoint, query: ["part": "snippet", "playlistId": listId, "key": key, "maxResults": 50]).map { data in
       let sermons = data["items"] as? [[String: Any]] ?? []
       return sermons.flatMap(Sermon.init)
     }.share(replay: 1, scope: SubjectLifetimeScope.whileConnected)

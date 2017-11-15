@@ -10,17 +10,24 @@ import Foundation
 import RxSwift
 import RxDataSources
 import Action
+import XCDYouTubeKit
 
 typealias SermonSection = AnimatableSectionModel<String, Sermon>
 
-struct SermonListViewModel: ViewModelBase {
-  let identifier: String = "SermonList"
+class SermonListViewModel: ViewModelBase {
+  let identifier: String = R.Names.sermonList.v
   let navigator: NavigatorType
+  var videoId: String?
   
   var items: Observable<[SermonSection]> {
-    return APIService.sermons().map { sermons in
+    return APIService.sermons(APIService.sermonListId).map { sermons in
       return [SermonSection(model: "강단 말씀", items: sermons)]
     }
+  }
+  
+  lazy var playAction = Action<Void, XCDYouTubeVideoPlayerViewController> { [unowned self] _ in
+    let fullscreenVideoPlayer = XCDYouTubeVideoPlayerViewController.init(videoIdentifier: self.videoId)
+    return Observable.just(fullscreenVideoPlayer)
   }
   
   init(navigator: NavigatorType) {

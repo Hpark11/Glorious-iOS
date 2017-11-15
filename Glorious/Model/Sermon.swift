@@ -14,6 +14,7 @@ struct Sermon {
   let title: String
   let description: String
   let imagePath: String
+  let videoId: String
   
   init?(data: [String: Any]) {
     guard let id = data["id"] as? String,
@@ -22,7 +23,9 @@ struct Sermon {
       let description = snippet["description"] as? String,
       let thumbnails = snippet["thumbnails"] as? [String: Any],
       let standard = thumbnails["standard"] as? [String: Any],
-      let imagePath = standard["url"] as? String else {
+      let imagePath = standard["url"] as? String,
+      let resourceId = snippet["resourceId"] as? [String: Any],
+      let videoId = resourceId["videoId"] as? String else {
       return nil
     }
     
@@ -30,6 +33,7 @@ struct Sermon {
     self.title = title
     self.description = description
     self.imagePath = imagePath
+    self.videoId = videoId
   }
 }
 

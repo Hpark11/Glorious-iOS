@@ -9,7 +9,15 @@
 /* Begin PBXBuildFile section */
 		15F6344187F4F278FE1B35F5 /* Pods_GloriousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D462DE5A4495D2373C124CA2 /* Pods_GloriousTests.framework */; };
 		61894EB15C145EE8B646EB25 /* Pods_Glorious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD62D5F4DD69F3F360A4A62 /* Pods_Glorious.framework */; };
-		8141141E1FBAAB1C00669EE0 /* YoutubePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8141141D1FBAAB1C00669EE0 /* YoutubePlayerViewController.swift */; };
+		813DB9441FBBCE9A0044193C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DB9431FBBCE9A0044193C /* MainTabBarController.swift */; };
+		813DB9461FBBDF9A0044193C /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DB9451FBBDF9A0044193C /* R.swift */; };
+		813DB9481FBBE12A0044193C /* CenterMessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DB9471FBBE12A0044193C /* CenterMessageListViewController.swift */; };
+		813DB94A1FBBE1380044193C /* CenterMessageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DB9491FBBE1380044193C /* CenterMessageListViewModel.swift */; };
+		813DB94C1FBBE14A0044193C /* FeaturedMessageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DB94B1FBBE14A0044193C /* FeaturedMessageListViewModel.swift */; };
+		813DB94E1FBBE1600044193C /* FeaturedMessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DB94D1FBBE1600044193C /* FeaturedMessageListViewController.swift */; };
+		813EB50C1FBC1C9300A2FA6D /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813EB50B1FBC1C9300A2FA6D /* UICollectionView+Ext.swift */; };
+		813EB50F1FBC1E3400A2FA6D /* SermonListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813EB50D1FBC1E3400A2FA6D /* SermonListCollectionViewCell.swift */; };
+		813EB5101FBC1E3400A2FA6D /* SermonListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 813EB50E1FBC1E3400A2FA6D /* SermonListCollectionViewCell.xib */; };
 		814114211FBAAE2000669EE0 /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814114201FBAAE2000669EE0 /* UITableView+Ext.swift */; };
 		8164E3E61FB95EA20054384D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8164E3E51FB95EA20054384D /* AppDelegate.swift */; };
 		8164E3EB1FB95EA20054384D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8164E3E91FB95EA20054384D /* Main.storyboard */; };
@@ -56,7 +64,15 @@
 		052FE3A5BE4787E8CB56A9A7 /* Pods-Glorious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glorious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Glorious/Pods-Glorious.debug.xcconfig"; sourceTree = "<group>"; };
 		0FA3976E8180A1B4C91EFC51 /* Pods-GloriousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GloriousUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GloriousUITests/Pods-GloriousUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E006BE7E0C344B28768C2C8 /* Pods-Glorious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glorious.release.xcconfig"; path = "Pods/Target Support Files/Pods-Glorious/Pods-Glorious.release.xcconfig"; sourceTree = "<group>"; };
-		8141141D1FBAAB1C00669EE0 /* YoutubePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubePlayerViewController.swift; sourceTree = "<group>"; };
+		813DB9431FBBCE9A0044193C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		813DB9451FBBDF9A0044193C /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
+		813DB9471FBBE12A0044193C /* CenterMessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterMessageListViewController.swift; sourceTree = "<group>"; };
+		813DB9491FBBE1380044193C /* CenterMessageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterMessageListViewModel.swift; sourceTree = "<group>"; };
+		813DB94B1FBBE14A0044193C /* FeaturedMessageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedMessageListViewModel.swift; sourceTree = "<group>"; };
+		813DB94D1FBBE1600044193C /* FeaturedMessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedMessageListViewController.swift; sourceTree = "<group>"; };
+		813EB50B1FBC1C9300A2FA6D /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
+		813EB50D1FBC1E3400A2FA6D /* SermonListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SermonListCollectionViewCell.swift; sourceTree = "<group>"; };
+		813EB50E1FBC1E3400A2FA6D /* SermonListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SermonListCollectionViewCell.xib; sourceTree = "<group>"; };
 		814114201FBAAE2000669EE0 /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
 		8164E3E21FB95EA20054384D /* Glorious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glorious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8164E3E51FB95EA20054384D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				814114201FBAAE2000669EE0 /* UITableView+Ext.swift */,
+				813EB50B1FBC1C9300A2FA6D /* UICollectionView+Ext.swift */,
 			);
 			path = "UI+Extension";
 			sourceTree = "<group>";
@@ -207,9 +224,13 @@
 		8164E4171FB960B20054384D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				813DB9431FBBCE9A0044193C /* MainTabBarController.swift */,
 				8164E41B1FB9671A0054384D /* SermonListViewController.swift */,
 				8164E41D1FB967A00054384D /* SermonListViewModel.swift */,
-				8141141D1FBAAB1C00669EE0 /* YoutubePlayerViewController.swift */,
+				813DB9471FBBE12A0044193C /* CenterMessageListViewController.swift */,
+				813DB9491FBBE1380044193C /* CenterMessageListViewModel.swift */,
+				813DB94D1FBBE1600044193C /* FeaturedMessageListViewController.swift */,
+				813DB94B1FBBE14A0044193C /* FeaturedMessageListViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +242,7 @@
 				8164E4221FB96C760054384D /* Addon */,
 				8164E4211FB96C650054384D /* Foundation */,
 				8164E41A1FB965360054384D /* Navigator */,
+				813DB9451FBBDF9A0044193C /* R.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -284,6 +306,8 @@
 			children = (
 				8164E4371FB995BC0054384D /* SermonTableViewCell.swift */,
 				8164E4381FB995BC0054384D /* SermonTableViewCell.xib */,
+				813EB50D1FBC1E3400A2FA6D /* SermonListCollectionViewCell.swift */,
+				813EB50E1FBC1E3400A2FA6D /* SermonListCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -417,6 +441,7 @@
 				8164E3F31FB95EA20054384D /* LaunchScreen.storyboard in Resources */,
 				8164E3F01FB95EA20054384D /* Assets.xcassets in Resources */,
 				8164E3EB1FB95EA20054384D /* Main.storyboard in Resources */,
+				813EB5101FBC1E3400A2FA6D /* SermonListCollectionViewCell.xib in Resources */,
 				8164E43A1FB995BC0054384D /* SermonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,20 +607,27 @@
 			files = (
 				8164E4271FB96DB10054384D /* Navigator.swift in Sources */,
 				8164E41E1FB967A00054384D /* SermonListViewModel.swift in Sources */,
+				813DB94C1FBBE14A0044193C /* FeaturedMessageListViewModel.swift in Sources */,
 				8164E41C1FB9671A0054384D /* SermonListViewController.swift in Sources */,
 				8164E4391FB995BC0054384D /* SermonTableViewCell.swift in Sources */,
 				8164E42D1FB970A30054384D /* Identifiable.swift in Sources */,
-				8141141E1FBAAB1C00669EE0 /* YoutubePlayerViewController.swift in Sources */,
+				813DB94E1FBBE1600044193C /* FeaturedMessageListViewController.swift in Sources */,
 				8164E42B1FB96F2E0054384D /* ViewModelBindable.swift in Sources */,
 				8164E42F1FB970B10054384D /* NibLoadable.swift in Sources */,
 				8164E4291FB96DC50054384D /* NavigatorType.swift in Sources */,
 				8164E3EE1FB95EA20054384D /* Glorious.xcdatamodeld in Sources */,
 				8164E3E61FB95EA20054384D /* AppDelegate.swift in Sources */,
+				813DB94A1FBBE1380044193C /* CenterMessageListViewModel.swift in Sources */,
+				813EB50F1FBC1E3400A2FA6D /* SermonListCollectionViewCell.swift in Sources */,
+				813DB9441FBBCE9A0044193C /* MainTabBarController.swift in Sources */,
 				8164E4341FB974C40054384D /* APIService.swift in Sources */,
+				813DB9461FBBDF9A0044193C /* R.swift in Sources */,
+				813EB50C1FBC1C9300A2FA6D /* UICollectionView+Ext.swift in Sources */,
 				8164E4201FB968290054384D /* Stage.swift in Sources */,
 				814114211FBAAE2000669EE0 /* UITableView+Ext.swift in Sources */,
 				8164E4251FB96D820054384D /* ViewModelBase.swift in Sources */,
 				8164E4311FB9721A0054384D /* Sermon.swift in Sources */,
+				813DB9481FBBE12A0044193C /* CenterMessageListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

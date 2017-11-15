@@ -10,6 +10,8 @@ import UIKit
 
 enum Stage {
   case sermonList(SermonListViewModel)
+  case centerMessageList(CenterMessageListViewModel)
+  case featuredMessageList(FeaturedMessageListViewModel)
   
   enum NavigationType {
     internal enum Show {
@@ -26,22 +28,32 @@ enum Stage {
     case show(Show)
     case modal(Modal)
   }
-  
 }
 
 extension Stage {
-  private func getVC(id: String) -> UIViewController {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let nc = storyboard.instantiateViewController(withIdentifier: id) as! UINavigationController
-    return nc.viewControllers.first!
+  private func getVC(_ root: UIViewController, id: String) -> UIViewController {
+    if let nc = root as? UINavigationController {
+      return nc.viewControllers.first!
+    } else {
+      return root
+    }
   }
   
-  func viewController() -> UIViewController {
+  func viewController(root: UIViewController) -> UIViewController {
     switch self {
     case .sermonList(let viewModel):
-      var vc = getVC(id: viewModel.identifier) as! SermonListViewController
+      var vc = getVC(root, id: viewModel.identifier) as! SermonListViewController
+      vc.bind(to: viewModel)
+      return vc.navigationController!
+    case .centerMessageList(let viewModel):
+      var vc = getVC(root, id: viewModel.identifier) as! CenterMessageListViewController
+      vc.bind(to: viewModel)
+      return vc.navigationController!
+    case .featuredMessageList(let viewModel):
+      var vc = getVC(root, id: viewModel.identifier) as! FeaturedMessageListViewController
       vc.bind(to: viewModel)
       return vc.navigationController!
     }
   }
 }
+
