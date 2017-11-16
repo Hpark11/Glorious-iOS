@@ -49,6 +49,10 @@ class SermonListViewController: UIViewController, ViewModelBindable {
   internal func bind() {
     viewModel.items.bind(to: collectionView.rx.items(dataSource: dataSource)).disposed(by: self.disposeBag)
     
+    viewModel.initSermon?.asObservable().subscribe(onNext: { [unowned self] sermon in
+      self.setDetailView(sermon: sermon)
+    }).disposed(by: disposeBag)
+    
     playButton.rx.bind(to: viewModel.playAction) { [unowned self] _ in
       let fullscreenVideoPlayer = XCDYouTubeVideoPlayerViewController.init(videoIdentifier: self.viewModel.videoId)
       self.present(fullscreenVideoPlayer, animated: false, completion: nil)
