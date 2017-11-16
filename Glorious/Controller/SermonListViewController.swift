@@ -32,8 +32,18 @@ class SermonListViewController: UIViewController, ViewModelBindable {
   }
   
   private func initView() {
-    nameLabel.layer.cornerRadius = 7.2
+    nameLabel.layer.cornerRadius = 9.6
     nameLabel.clipsToBounds = true
+  }
+  
+  private func setDetailView(sermon: Sermon) {
+    let contents = Utils.replaced(R.Patterns.mainNameAndDate.rawValue, text: sermon.title, template: "$2|$3").components(separatedBy: "|")
+    if let first = contents.first { nameLabel.text = first }
+    if let last = contents.last { dateLabel.text = last }
+    
+    let descriptions = sermon.description.components(separatedBy: "\n").filter { $0.hasPrefix("말씀") || $0.hasPrefix("제목") }
+    if let first = descriptions.first { sermonTitleLabel.text = Utils.replaced(R.Patterns.mainTitle.rawValue, text: first, template: "$2") }
+    if let last = descriptions.last { scriptLabel.text = Utils.replaced(R.Patterns.mainScript.rawValue, text: last, template: "$2") }
   }
   
   internal func bind() {
@@ -47,9 +57,8 @@ class SermonListViewController: UIViewController, ViewModelBindable {
     collectionView.rx.itemSelected.map { [unowned self] indexPath in
       if let url = URL(string: self.dataSource[indexPath].imagePath) {self.mainImageView.kf.setImage(with: url)}
       self.viewModel.videoId = self.dataSource[indexPath].videoId
-      }.subscribe(onNext: { _ in
-        print("")
-      }).disposed(by: disposeBag)
+      self.setDetailView(sermon: self.dataSource[indexPath])
+    }.subscribe().disposed(by: disposeBag)
   }
   
   private func configure() {
@@ -58,25 +67,18 @@ class SermonListViewController: UIViewController, ViewModelBindable {
       layout.minimumLineSpacing = 0
       layout.itemSize = CGSize(width: collectionView.frame.width / 5 * 2.32, height: collectionView.frame.height)
     }
-    
     collectionView.register(SermonListCollectionViewCell.self)
   }
   
   let dataSource = RxCollectionViewSectionedAnimatedDataSource<SermonSection>(configureCell: {
     data, collectionView, indexPath, sermon in
     let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as SermonListCollectionViewCell
-    
-    do {
-      let pat = "(일산영광교회\\ )([\\D]+)(\\d+\\.\\d+\\.\\d+)([\\w\\ ]*)"
-      let regex = try NSRegularExpression(pattern: pat, options: [])
-      let contents = regex.stringByReplacingMatches(in: sermon.title, options: [], range: NSRange(location: 0, length: sermon.title.count), withTemplate: "$2|$3|$4")
-      cell.configure(thumbnailPath: sermon.imagePath, contents: contents)
-    } catch {
-      cell.configure(thumbnailPath: sermon.imagePath, contents: "2000.01.01|강태흥 목사|주일예배")
-    }
+    let contents = Utils.replaced(R.Patterns.mainNameAndDate.rawValue, text: sermon.title, template: "$2|$3|$4")
+    cell.configure(thumbnailPath: sermon.imagePath, contents: contents.count > 4 ? contents : "2000.01.01|강태흥 목사|주일예배")
     return cell
   }, configureSupplementaryView: {data, collectionView, text, indexPath in
     return UICollectionReusableView()
   })
-  
 }
+
+

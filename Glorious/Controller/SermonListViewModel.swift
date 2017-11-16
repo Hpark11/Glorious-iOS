@@ -27,7 +27,7 @@ class SermonListViewModel: ViewModelBase {
   lazy var playAction = CocoaAction {_ in
     return Observable.empty()
   }
-  
+
   init(navigator: NavigatorType) {
     self.navigator = navigator
   }
