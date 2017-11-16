@@ -21,9 +21,12 @@ class SermonListCollectionViewCell: UICollectionViewCell, NibLoadable {
     mainView.clipsToBounds = true
   }
   
-  public func configure(thumbnailPath: String, name: String, date: String, extra: String = "") {
+  public func configure(thumbnailPath: String, contents: String) {
     if let url = URL(string: thumbnailPath) { imageView.kf.setImage(with: url) }
-    mainLabel.text = date + extra
-    nameLabel.text = name
+    let data = contents.components(separatedBy: "|")
+    if data.count > 0 {
+      mainLabel.text = data.dropFirst().joined(separator: " ") + (data.last!.count > 1 ? "" : "주일예배")
+      nameLabel.text = data.first!
+    }
   }
 }
