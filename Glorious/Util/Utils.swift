@@ -10,7 +10,7 @@ import Foundation
 
 struct Utils {
   static func replaced(_ pattern: String, text: String, template: String) -> String {
-    guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else { return "" }
+    guard let regex = try? NSRegularExpression(pattern: pattern, options: [.caseInsensitive]) else { return "" }
     return regex.stringByReplacingMatches(in: text, options: [], range: NSRange(location: 0, length: text.count), withTemplate: template)
   }
 }

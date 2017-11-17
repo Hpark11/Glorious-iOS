@@ -16,6 +16,16 @@ struct Sermon {
   let imagePath: String
   let videoId: String
   
+  init() {
+    self.id = ""
+    self.title = ""
+    self.description = ""
+    self.imagePath = ""
+    self.videoId = ""
+  }
+}
+
+extension Sermon {
   init?(data: [String: Any]) {
     guard let id = data["id"] as? String,
       let snippet = data["snippet"] as? [String: Any],
@@ -26,7 +36,7 @@ struct Sermon {
       let imagePath = standard["url"] as? String,
       let resourceId = snippet["resourceId"] as? [String: Any],
       let videoId = resourceId["videoId"] as? String else {
-      return nil
+        return nil
     }
     
     self.id = id

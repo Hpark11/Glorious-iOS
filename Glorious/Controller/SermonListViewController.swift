@@ -37,19 +37,22 @@ class SermonListViewController: UIViewController, ViewModelBindable {
   }
   
   private func setDetailView(sermon: Sermon) {
+    if let url = URL(string: sermon.imagePath) {self.mainImageView.kf.setImage(with: url)}
+    self.viewModel.videoId = sermon.videoId
+    
     let contents = Utils.replaced(R.Patterns.mainNameAndDate.rawValue, text: sermon.title, template: "$2|$3").components(separatedBy: "|")
     if let first = contents.first { nameLabel.text = first }
     if let last = contents.last { dateLabel.text = last }
     
     let descriptions = sermon.description.components(separatedBy: "\n").filter { $0.hasPrefix("말씀") || $0.hasPrefix("제목") }
     if let first = descriptions.first { sermonTitleLabel.text = Utils.replaced(R.Patterns.mainTitle.rawValue, text: first, template: "$2") }
-    if let last = descriptions.last { scriptLabel.text = Utils.replaced(R.Patterns.mainScript.rawValue, text: last, template: "$2") }
+    if let last = descriptions.last { scriptLabel.text = "(\(Utils.replaced(R.Patterns.mainScript.rawValue, text: last, template: "$2")))" }
   }
   
   internal func bind() {
     viewModel.items.bind(to: collectionView.rx.items(dataSource: dataSource)).disposed(by: self.disposeBag)
     
-    viewModel.initSermon?.asObservable().subscribe(onNext: { [unowned self] sermon in
+    viewModel.initSermon.asObservable().subscribe(onNext: { [unowned self] sermon in
       self.setDetailView(sermon: sermon)
     }).disposed(by: disposeBag)
     
@@ -59,8 +62,6 @@ class SermonListViewController: UIViewController, ViewModelBindable {
     }
     
     collectionView.rx.itemSelected.map { [unowned self] indexPath in
-      if let url = URL(string: self.dataSource[indexPath].imagePath) {self.mainImageView.kf.setImage(with: url)}
-      self.viewModel.videoId = self.dataSource[indexPath].videoId
       self.setDetailView(sermon: self.dataSource[indexPath])
     }.subscribe().disposed(by: disposeBag)
   }
@@ -78,7 +79,7 @@ class SermonListViewController: UIViewController, ViewModelBindable {
     data, collectionView, indexPath, sermon in
     let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as SermonListCollectionViewCell
     let contents = Utils.replaced(R.Patterns.mainNameAndDate.rawValue, text: sermon.title, template: "$2|$3|$4")
-    cell.configure(thumbnailPath: sermon.imagePath, contents: contents.count > 4 ? contents : "2000.01.01|강태흥 목사|주일예배")
+    cell.configure(thumbnailPath: sermon.imagePath, contents: contents.count > 4 ? contents : "강태흥 목사|2000.01.01|주일예배")
     return cell
   }, configureSupplementaryView: {data, collectionView, text, indexPath in
     return UICollectionReusableView()

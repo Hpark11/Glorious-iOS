@@ -18,7 +18,6 @@ class APIService {
   
   static let sermonListId = "UU4Y-jkVQdsAAqSzD51chjJQ"
   static let centerMessageListId = "UUwYStAqJNzgIEf33u7a0xiQ"
-  //static let playListId = ""
   
   enum ServiceError: Error {
     case invalidURL(String)

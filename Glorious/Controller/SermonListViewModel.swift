@@ -17,11 +17,11 @@ class SermonListViewModel: ViewModelBase {
   let identifier: String = R.Names.sermonList.v
   let navigator: NavigatorType
   var videoId: String?
-  var initSermon: Variable<Sermon>?
+  var initSermon = Variable<Sermon>(Sermon())
   
   var items: Observable<[SermonSection]> {
     return APIService.sermons(APIService.sermonListId).map { [unowned self] sermons in
-      if let first = sermons.first { self.initSermon?.value = first }
+      if let first = sermons.first { self.initSermon.value = first }
       return [SermonSection(model: "강단 말씀", items: sermons)]
     }
   }
@@ -32,6 +32,5 @@ class SermonListViewModel: ViewModelBase {
 
   init(navigator: NavigatorType) {
     self.navigator = navigator
-    //self.initSermon = Variable(
   }
 }

@@ -25,8 +25,9 @@ class SermonListCollectionViewCell: UICollectionViewCell, NibLoadable {
     if let url = URL(string: thumbnailPath) { imageView.kf.setImage(with: url) }
     let data = contents.components(separatedBy: "|")
     if data.count > 0 {
-      mainLabel.text = data.dropFirst().joined(separator: " ") + (data.last!.count > 1 ? "" : "주일예배")
       nameLabel.text = data.first!
+      mainLabel.text = data.dropFirst().joined(separator: " ") + (data.last!.count > 1 ? "" : "주일예배")
+      
     }
   }
 }
