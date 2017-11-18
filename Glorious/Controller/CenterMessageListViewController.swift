@@ -46,12 +46,39 @@ class CenterMessageListViewController: UIViewController, ViewModelBindable {
     if let url = URL(string: sermon.imagePath) {self.mainImageView.kf.setImage(with: url)}
     self.viewModel.videoId = sermon.videoId
     
-    if let first = sermon.description.components(separatedBy: ",").first {nameLabel.text = Utils.replaced(R.Patterns.name.rawValue, text: first, template: "$2")}
-    var data = Utils.replaced(R.Patterns.centerMessage.rawValue, text: sermon.title, template: "$3.$1.$2|$6|$7").components(separatedBy: "|")
-    if data.count >= 2 {
-      dateLabel.text = data.removeFirst()
-      sermonTitleLabel.text = data.removeFirst()
-      scriptLabel.text = data.count > 0 ? data.last! : ""
+    if let first = sermon.description.components(separatedBy: ",").first {
+      let text = Utils.replaced(R.Patterns.name.rawValue, text: first, template: "$2")
+      nameLabel.text = text.count > 2 ? text : "Rev. Kwang Su Ryu"
+    }
+    
+    if sermon.title.hasPrefix("201") {
+      var data = Utils.replaced(R.Patterns.centerMessageN.rawValue, text: sermon.title, template: "$1.$2.$3|$4").components(separatedBy: "|")
+      if let last = data.last {
+        var replaced: String = ""
+        switch last.lowercased() {
+        case "h": replaced = "핵심예배"
+        case "biz": replaced = "산업선교"
+        case "g": replaced = "구역예배"
+        case "a": replaced = "주일 1부"
+        case "b": replaced = "주일 2부"
+        default: break
+        }
+        
+        data[data.endIndex - 1] = replaced
+      }
+      
+      if data.count >= 2 {
+        dateLabel.text = data.removeFirst()
+        sermonTitleLabel.text = data.removeFirst()
+        scriptLabel.text = data.count > 0 ? data.last! : ""
+      }
+    } else {
+      var data = Utils.replaced(R.Patterns.centerMessage.rawValue, text: sermon.title, template: "$3.$1.$2|$6|$7").components(separatedBy: "|")
+      if data.count >= 2 {
+        dateLabel.text = data.removeFirst()
+        sermonTitleLabel.text = data.removeFirst()
+        scriptLabel.text = data.count > 0 ? data.last! : ""
+      }
     }
   }
   
@@ -90,24 +117,43 @@ class CenterMessageListViewController: UIViewController, ViewModelBindable {
     data, collectionView, indexPath, sermon in
     let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as SermonListCollectionViewCell
     
-    let name = Utils.replaced(R.Patterns.name.rawValue, text: sermon.description.components(separatedBy: ",").first!, template: "$2")
-    var data = Utils.replaced(R.Patterns.centerMessage.rawValue, text: sermon.title, template: "\(name)|$3.$1.$2|$4").components(separatedBy: "|")
-    if let last = data.last {
-      var replaced: String = ""
-      switch last.lowercased() {
-      case "core": replaced = "핵심예배"
-      case "biz": replaced = "산업선교"
-      case "district": replaced = "구역예배"
-      case "1st": replaced = "주일 1부"
-      case "2nd": replaced = "주일 2부"
-      default: break
+    if sermon.title.hasPrefix("201") {
+      let name = "Rev. Kwang Su Ryu"
+      var data = Utils.replaced(R.Patterns.centerMessageN.rawValue, text: sermon.title, template: "\(name)|$1.$2.$3|$4").components(separatedBy: "|")
+      if let last = data.last {
+        var replaced: String = ""
+        switch last.lowercased() {
+        case "h": replaced = "핵심예배"
+        case "biz": replaced = "산업선교"
+        case "g": replaced = "구역예배"
+        case "a": replaced = "주일 1부"
+        case "b": replaced = "주일 2부"
+        default: break
+        }
+        
+        data[data.endIndex - 1] = replaced
       }
-      
-      data[data.endIndex - 1] = replaced
+      let contents = data.joined(separator: "|")
+      cell.configure(thumbnailPath: sermon.imagePath, contents: contents.count > 4 ? contents : "Rev. Kwang Su Ryu|2000.01.01|주일예배")
+    } else {
+      let name = Utils.replaced(R.Patterns.name.rawValue, text: sermon.description.components(separatedBy: ",").first!, template: "$2")
+      var data = Utils.replaced(R.Patterns.centerMessage.rawValue, text: sermon.title, template: "\(name)|$3.$1.$2|$4").components(separatedBy: "|")
+      if let last = data.last {
+        var replaced: String = ""
+        switch last.lowercased() {
+        case "core": replaced = "핵심예배"
+        case "biz": replaced = "산업선교"
+        case "district": replaced = "구역예배"
+        case "1st": replaced = "주일 1부"
+        case "2nd": replaced = "주일 2부"
+        default: break
+        }
+        
+        data[data.endIndex - 1] = replaced
+      }
+      let contents = data.joined(separator: "|")
+      cell.configure(thumbnailPath: sermon.imagePath, contents: contents.count > 4 ? contents : "Rev. Kwang Su Ryu|2000.01.01|주일예배")
     }
-    
-    let contents = data.joined(separator: "|")
-    cell.configure(thumbnailPath: sermon.imagePath, contents: contents.count > 4 ? contents : "Rev. Kwang Su Ryu|2000.01.01|주일예배")
     return cell
   }, configureSupplementaryView: {data, collectionView, text, indexPath in
     return UICollectionReusableView()
