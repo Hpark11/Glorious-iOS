@@ -31,19 +31,27 @@ extension Sermon {
       let snippet = data["snippet"] as? [String: Any],
       let title = snippet["title"] as? String,
       let description = snippet["description"] as? String,
-      let thumbnails = snippet["thumbnails"] as? [String: Any],
-      let standard = thumbnails["standard"] as? [String: Any],
-      let imagePath = standard["url"] as? String,
-      let resourceId = snippet["resourceId"] as? [String: Any],
-      let videoId = resourceId["videoId"] as? String else {
+      let thumbnails = snippet["thumbnails"] as? [String: Any] else {
         return nil
+    }
+    
+    if let standard = thumbnails["standard"] as? [String: Any] {
+      guard let imagePath = standard["url"] as? String else {return nil}
+      self.imagePath = imagePath
+    } else if let high = thumbnails["high"] as? [String: Any] {
+      guard let imagePath = high["url"] as? String else {return nil}
+      self.imagePath = imagePath
+    } else { return nil }
+    
+    if let resourceId = snippet["resourceId"] as? [String: Any], let videoId = resourceId["videoId"] as? String {
+      self.videoId = videoId
+    } else {
+      self.videoId = id
     }
     
     self.id = id
     self.title = title
     self.description = description
-    self.imagePath = imagePath
-    self.videoId = videoId
   }
 }
 

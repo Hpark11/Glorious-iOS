@@ -48,5 +48,4 @@ class MainTabBarController: UITabBarController {
     viewControllers = [sermonListNavigationController, centerMessageListNavigationController, featuredMessageListNavigationController]
   }
   
-  
 }

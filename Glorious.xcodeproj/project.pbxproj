@@ -10,6 +10,8 @@
 		15F6344187F4F278FE1B35F5 /* Pods_GloriousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D462DE5A4495D2373C124CA2 /* Pods_GloriousTests.framework */; };
 		61894EB15C145EE8B646EB25 /* Pods_Glorious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD62D5F4DD69F3F360A4A62 /* Pods_Glorious.framework */; };
 		8136A7471FBDCCBD003B37C5 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136A7461FBDCCBD003B37C5 /* Utils.swift */; };
+		8136F0C01FBECFC0004463D7 /* MainSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136F0BF1FBECFC0004463D7 /* MainSplashViewController.swift */; };
+		8136F0C31FBED814004463D7 /* StretchingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8136F0C21FBED814004463D7 /* StretchingAnimator.swift */; };
 		813DB9441FBBCE9A0044193C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DB9431FBBCE9A0044193C /* MainTabBarController.swift */; };
 		813DB9461FBBDF9A0044193C /* R.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DB9451FBBDF9A0044193C /* R.swift */; };
 		813DB9481FBBE12A0044193C /* CenterMessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813DB9471FBBE12A0044193C /* CenterMessageListViewController.swift */; };
@@ -66,6 +68,8 @@
 		0FA3976E8180A1B4C91EFC51 /* Pods-GloriousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GloriousUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GloriousUITests/Pods-GloriousUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E006BE7E0C344B28768C2C8 /* Pods-Glorious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glorious.release.xcconfig"; path = "Pods/Target Support Files/Pods-Glorious/Pods-Glorious.release.xcconfig"; sourceTree = "<group>"; };
 		8136A7461FBDCCBD003B37C5 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8136F0BF1FBECFC0004463D7 /* MainSplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSplashViewController.swift; sourceTree = "<group>"; };
+		8136F0C21FBED814004463D7 /* StretchingAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingAnimator.swift; sourceTree = "<group>"; };
 		813DB9431FBBCE9A0044193C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		813DB9451FBBDF9A0044193C /* R.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R.swift; sourceTree = "<group>"; };
 		813DB9471FBBE12A0044193C /* CenterMessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterMessageListViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8136F0C11FBED7C4004463D7 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				8136F0C21FBED814004463D7 /* StretchingAnimator.swift */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
 		8141141F1FBAAE0C00669EE0 /* UI+Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				813DB9431FBBCE9A0044193C /* MainTabBarController.swift */,
+				8136F0BF1FBECFC0004463D7 /* MainSplashViewController.swift */,
 				8164E41B1FB9671A0054384D /* SermonListViewController.swift */,
 				8164E41D1FB967A00054384D /* SermonListViewModel.swift */,
 				813DB9471FBBE12A0044193C /* CenterMessageListViewController.swift */,
@@ -240,6 +253,7 @@
 		8164E4181FB962D30054384D /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				8136F0C11FBED7C4004463D7 /* Animator */,
 				8164E4321FB9735B0054384D /* API */,
 				8164E4221FB96C760054384D /* Addon */,
 				8164E4211FB96C650054384D /* Foundation */,
@@ -621,6 +635,7 @@
 				8164E3EE1FB95EA20054384D /* Glorious.xcdatamodeld in Sources */,
 				8164E3E61FB95EA20054384D /* AppDelegate.swift in Sources */,
 				813DB94A1FBBE1380044193C /* CenterMessageListViewModel.swift in Sources */,
+				8136F0C01FBECFC0004463D7 /* MainSplashViewController.swift in Sources */,
 				813EB50F1FBC1E3400A2FA6D /* SermonListCollectionViewCell.swift in Sources */,
 				813DB9441FBBCE9A0044193C /* MainTabBarController.swift in Sources */,
 				8164E4341FB974C40054384D /* APIService.swift in Sources */,
@@ -629,6 +644,7 @@
 				8164E4201FB968290054384D /* Stage.swift in Sources */,
 				814114211FBAAE2000669EE0 /* UITableView+Ext.swift in Sources */,
 				8164E4251FB96D820054384D /* ViewModelBase.swift in Sources */,
+				8136F0C31FBED814004463D7 /* StretchingAnimator.swift in Sources */,
 				8164E4311FB9721A0054384D /* Sermon.swift in Sources */,
 				813DB9481FBBE12A0044193C /* CenterMessageListViewController.swift in Sources */,
 				8136A7471FBDCCBD003B37C5 /* Utils.swift in Sources */,

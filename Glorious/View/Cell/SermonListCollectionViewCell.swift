@@ -27,7 +27,6 @@ class SermonListCollectionViewCell: UICollectionViewCell, NibLoadable {
     if data.count > 0 {
       nameLabel.text = data.first!
       mainLabel.text = data.dropFirst().joined(separator: " ") + (data.last!.count > 1 ? "" : "주일예배")
-      
     }
   }
 }

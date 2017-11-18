@@ -20,10 +20,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eS5-RH-gaM">
-                        <rect key="frame" x="0.0" y="0.0" width="397" height="305.5"/>
+                        <rect key="frame" x="8" y="5.5" width="381" height="294.5"/>
                     </imageView>
+                    <view alpha="0.45000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHg-DR-MUt">
+                        <rect key="frame" x="8" y="5.5" width="381" height="294.5"/>
+                        <color key="backgroundColor" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imb-J5-YnH">
-                        <rect key="frame" x="12" y="257.5" width="385" height="48"/>
+                        <rect key="frame" x="163" y="129" width="71" height="48"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="48" id="Ir8-u5-vRd"/>
@@ -33,14 +37,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Imb-J5-YnH" secondAttribute="trailing" id="0UJ-Qo-NTl"/>
-                    <constraint firstItem="eS5-RH-gaM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7Kh-on-fBK"/>
-                    <constraint firstItem="eS5-RH-gaM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CbA-TB-etX"/>
-                    <constraint firstAttribute="bottom" secondItem="Imb-J5-YnH" secondAttribute="bottom" id="Mcm-tG-wc3"/>
-                    <constraint firstAttribute="bottom" secondItem="eS5-RH-gaM" secondAttribute="bottom" id="fRC-mR-TcC"/>
-                    <constraint firstAttribute="trailing" secondItem="eS5-RH-gaM" secondAttribute="trailing" id="mAN-no-gtc"/>
-                    <constraint firstItem="Imb-J5-YnH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="y0u-xP-IwP"/>
+                    <constraint firstItem="Imb-J5-YnH" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="3bE-GJ-a1b"/>
+                    <constraint firstItem="eS5-RH-gaM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7Kh-on-fBK"/>
+                    <constraint firstItem="eS5-RH-gaM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5.5999999999999996" id="CbA-TB-etX"/>
+                    <constraint firstItem="zHg-DR-MUt" firstAttribute="trailing" secondItem="eS5-RH-gaM" secondAttribute="trailing" id="JBS-AP-0jD"/>
+                    <constraint firstItem="zHg-DR-MUt" firstAttribute="top" secondItem="eS5-RH-gaM" secondAttribute="top" id="bTP-Qc-Pry"/>
+                    <constraint firstAttribute="bottom" secondItem="eS5-RH-gaM" secondAttribute="bottom" constant="5.5999999999999996" id="fRC-mR-TcC"/>
+                    <constraint firstItem="zHg-DR-MUt" firstAttribute="leading" secondItem="eS5-RH-gaM" secondAttribute="leading" id="jNC-TE-3NC"/>
+                    <constraint firstItem="Imb-J5-YnH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mAE-wd-2rz"/>
+                    <constraint firstAttribute="trailing" secondItem="eS5-RH-gaM" secondAttribute="trailing" constant="8" id="mAN-no-gtc"/>
+                    <constraint firstItem="zHg-DR-MUt" firstAttribute="bottom" secondItem="eS5-RH-gaM" secondAttribute="bottom" id="og8-YT-76w"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
